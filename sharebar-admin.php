@@ -18,7 +18,7 @@
 	$id = $_GET['id'] ? $_GET['id'] : $_POST['id'];
 	$pos = $_GET['pos'] ? $_GET['pos'] : $_POST['pos'];
 	$status = $_GET['status'] ? $_GET['status'] : $_POST['status'];
-	$task = $_GET['task'] ? $_GET['task'] : $_POST['task'];
+	$task = $_GET['t'] ? $_GET['t'] : $_POST['t'];
 	$do = $_POST['do'];
 	
 	if($id)	$item = $wpdb->get_row("SELECT * FROM ".$wpdb->prefix."sharebar WHERE id=$id");
@@ -75,7 +75,7 @@
 
 <h2>Custom Sharebar</h2>
 
-<h4 class="h4title"><div class="alignleft">By <a href="http://mdolon.com/" target="_blank">Monjurul Dolon</a> of <a href="http://devgrow.com/" target="_blank">DevGrow</a></div><div class="alignright"><a href="?page=Sharebar">Home</a> - <a href="?page=Sharebar&task=settings">Settings</a> - <a href="../wp-content/plugins/sharebar/README" target="_blank">Changelog</a> - <a href="http://devgrow.com/sharebar-wordpress-plugin/">Support</a></div></h4>
+<h4 class="h4title"><div class="alignleft">By <a href="http://mdolon.com/" target="_blank">Monjurul Dolon</a> of <a href="http://devgrow.com/" target="_blank">DevGrow</a></div><div class="alignright"><a href="?page=Sharebar">Home</a> - <a href="?page=Sharebar&t=settings">Settings</a> - <a href="../wp-content/plugins/sharebar/readme.txt" target="_blank">Changelog</a> - <a href="http://devgrow.com/sharebar-wordpress-plugin/">Support</a></div></h4>
 
 <?php if($task == 'edit' || $task == 'new'){?>
 
@@ -192,13 +192,13 @@
 	<p>You can also call an individual button in any template by using the following code (where size is either <em>big</em> or <em>small</em>):
 	<code>&lt;?php sharebar_button('name','size'); ?&gt;</code></p>
 	<h3 class="alignleft">Active Buttons:</h3>
-	<a href="?page=Sharebar&task=new" class="button alignright add-button">Add New Button</a>
+	<a href="?page=Sharebar&t=new" class="button alignright add-button">Add New Button</a>
 	<table id="sharebar-tl">
 		<thead><tr><th class='leftj'>Name</th><th>Position</th><th>Big Button</th><th>Small Button</th><th>Actions</th></tr></thead>
 		<tbody>	
 		<?php $results = $wpdb->get_results("SELECT * FROM ".$wpdb->prefix."sharebar ORDER BY position, id ASC"); echo "\n";
 		foreach($results as $result){
-			echo "\t\t<tr><td class='leftj'>".$result->name."</td><td>".$result->position."<a href='?page=Sharebar&pos=moveup&id=".$result->id."'><img src='../wp-content/plugins/sharebar/images/up.gif'/></a><a href='?page=Sharebar&pos=movedown&id=".$result->id."'><img src='../wp-content/plugins/sharebar/images/down.gif'/></a></td><td>".$result->big."</td><td>".$result->small."</td><td><a href='?page=".$_GET['page']."&task=edit&id=".$result->id."'>Edit</a> | <a href='?page=".$_GET['page']."&task=delete&id=".$result->id."'>Delete</a></td></tr>\n";
+			echo "\t\t<tr><td class='leftj'>".$result->name."</td><td>".$result->position."<a href='?page=Sharebar&pos=moveup&id=".$result->id."'><img src='../wp-content/plugins/sharebar/images/up.gif'/></a><a href='?page=Sharebar&pos=movedown&id=".$result->id."'><img src='../wp-content/plugins/sharebar/images/down.gif'/></a></td><td>".$result->big."</td><td>".$result->small."</td><td><a href='?page=".$_GET['page']."&t=edit&id=".$result->id."'>Edit</a> | <a href='?page=".$_GET['page']."&t=delete&id=".$result->id."'>Delete</a></td></tr>\n";
 		} ?>
 		</tbody>
 	</table> 
