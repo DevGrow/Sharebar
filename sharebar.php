@@ -115,7 +115,7 @@ function sharebar_header(){
 
 	if(function_exists('wp_enqueue_script') && (is_single() || is_page())) {
 		wp_enqueue_script('jquery');
-		wp_enqueue_script('sharebar', get_bloginfo('wpurl').'/wp-content/plugins/sharebar/js/sharebar.js');
+		wp_enqueue_script('sharebar', get_bloginfo('wpurl').'/wp-content/plugins/sharebar/js/sharebar.js',array(),false,true);
 		echo '<link rel="stylesheet" href="'.get_bloginfo('wpurl').'/wp-content/plugins/sharebar/css/sharebar.css" type="text/css" media="screen" />';
 	}
 }
