@@ -1,0 +1,34 @@
+=== Sharebar ===
+Author: Monjurul Dolon
+Tags: sharing, social networks, marketing, social media, sharebar, sharebox
+Requires at least: 2.0
+Tested up to: 3.0
+Stable tag: 2.2.9
+
+Sharebar adds a dynamic and fully customizable vertical box to the left of a blog post that contains links/buttons to popular social networking sites.
+
+
+== Description ==
+
+Sharebar adds a dynamic and fully customizable vertical box to the left of a blog post that contains links/buttons to popular social networking sites.  For wide blogs, a vertical bar with popular sharing icons appears on the left of your post.  If the page is resized below 1000px (default), the vertical bar disappears and a horizontal sharebar appears under the post title.
+
+Big Buttons are used in the vertical Sharebar to the left of the post, while the Small Buttons are used in the horizontal Sharebar that appears under the post title (by default) if the width of the page is less than 1000px.
+
+When Auto mode (enabled in settings) is ON, the Sharebars are added automatically.  When Auto mode is off, you must manually add the sharebar code to your template files:
+	Vertical (next to post) Sharebar: <?php sharebar(); ?>
+	Horizontal Sharebar: <?php sharebar_horizontal(); ?>
+
+You can also call an individual button in any template by using the following code (where size is either big or small): <?php sharebar_button('name','size'); ?>
+
+Full instructions and example can be found at: http://devgrow.com/sharebar-wordpress-plugin/
+
+
+== Installation ==
+
+Upload the Sharebar plugin to your plugins directory, activate it and it should work out of the box.  Then tweak the buttons and settings to your likings!
+
+
+== Changelog ==
+
+= 1.0.0 =
+* Initial release so no changes =)

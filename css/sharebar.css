@@ -1,0 +1,9 @@
+#sharebar { display: none; position: absolute; width: 60px; float: left; background: #fff; padding: 0; text-align: center; border: 1px solid #ccc; list-style: none; margin: 0; z-index: 99; }
+#sharebar li { display: block; margin: 5px; padding: 0;}
+#sharebarx { display: none; list-style: none; width: 100%; float: left; margin: 0 0 10px; padding: 0; }
+#sharebarx a { line-height: 14px; text-decoration: none; }
+#sharebarx li { float: left; margin-right: 20px; line-height: 18px; }
+.sharebar-button { font-size: 11px; font-family: Verdana, Arial; padding: 2px 4px; background: #f7f7f7; color: #444; border: 1px solid #ddd; display: block;margin: 0 0 5px; }
+.sharebar-button:hover { border-color: #aaa; }
+.FBConnectButton_Small{background-position:-5px -232px !important;border-left:1px solid #1A356E;}
+.FBConnectButton_Text{margin-left:12px !important ;padding:2px 3px 3px !important;}
