@@ -81,27 +81,30 @@ function sharebar_settings($auto, $horizontal, $width, $position, $leftoffset, $
 
 
 function sharebar_auto($content){
-	if(get_option('sharebar_auto') && (is_single() || is_page())){ sharebar(); sharebar_horizontal(); }
-	echo $content;
+	if(get_option('sharebar_auto') && (is_single() || is_page())){ $str = sharebar(false); $str .= sharebar_horizontal(false); }
+	$newcontent = $str.$content;
+	return $newcontent;
 }
 
-function sharebar(){
+function sharebar($print = true){
 	global $wpdb;
-	echo '<ul id="sharebar">';
-	$results = $wpdb->get_results("SELECT * FROM ".$wpdb->prefix."sharebar ORDER BY position, id ASC"); echo "\n";
+	$str = '<ul id="sharebar">';
+	$results = $wpdb->get_results("SELECT * FROM ".$wpdb->prefix."sharebar ORDER BY position, id ASC"); $str .= "\n";
 	foreach($results as $result)
-		echo '<li>'.sharebar_filter($result->big).'</li>';
-	echo '</ul>';
+		$str .= '<li>'.sharebar_filter($result->big).'</li>';
+	$str .= '</ul>';
+	if($print) echo $str; else return $str;
 }
 
-function sharebar_horizontal(){
+function sharebar_horizontal($print = true){
 	if(get_option('sharebar_horizontal')){
 		global $wpdb;
-		echo '<ul id="sharebarx">';
-		$results = $wpdb->get_results("SELECT * FROM ".$wpdb->prefix."sharebar ORDER BY position, id ASC"); echo "\n";
+		$str = '<ul id="sharebarx">';
+		$results = $wpdb->get_results("SELECT * FROM ".$wpdb->prefix."sharebar ORDER BY position, id ASC"); $str .= "\n";
 		foreach($results as $result)
-			echo '<li>'.sharebar_filter($result->small).'</li>';
-		echo '</ul>';
+			$str .= '<li>'.sharebar_filter($result->small).'</li>';
+		$str .= '</ul>';
+		if($echo) echo $str; else return $str;
 	}
 }
 
