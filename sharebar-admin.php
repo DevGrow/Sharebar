@@ -203,7 +203,7 @@
 		} ?>
 		</tbody>
 	</table> 
-	<a href="?page=<?php echo $_GET['page']; ?>&task=reset">Reset Buttons</a>
+	<a href="?page=<?php echo $_GET['page']; ?>&t=reset">Reset Buttons</a>
 	
 <?php } ?>
 
