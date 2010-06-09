@@ -80,6 +80,7 @@
 <?php if($task == 'edit' || $task == 'new'){?>
 
 	<h3><?php if($task == 'edit') echo "Edit"; else echo "Add New"; ?> Button</h3>
+	<p>You can use HTML, Javascript or inline CSS for the button code.  Additionally, the following variables are automatically extracted from the post and can be used in your code: <strong>[url]</strong>, <strong>[title]</strong>, and <strong>[author]</strong>.</p>
 	<?php
 		if($task == 'edit'){
 			echo '<table class="thebutton">';
