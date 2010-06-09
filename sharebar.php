@@ -3,7 +3,7 @@
 Plugin Name: Sharebar
 Plugin URI: http://devgrow.com/sharebar-wordpress-plugin/
 Description: Adds a dynamic bar with sharing icons (Facebook, Twitter, etc.) that changes based on browser size and page location.  More info and demo at: <a href="http://devgrow.com/sharebar-wordpress-plugin/">Sharebar Plugin Home</a>
-Version: 1.0
+Version: 1.0.1
 Author: Monjurul Dolon
 Author URI: http://mdolon.com/
 License: GPL2
@@ -40,7 +40,7 @@ function sharebar_install(){
 		$wpdb->query("INSERT INTO $table(position,name, big, small)
 			VALUES('1','tweetmeme', '<script type=\'text/javascript\' src=\'http://tweetmeme.com/i/scripts/button.js\'></script>', '<script type=\'text/javascript\'>tweetmeme_style = \'compact\';</script><script type=\'text/javascript\' src=\'http://tweetmeme.com/i/scripts/button.js\'></script>')");
 		$wpdb->query("INSERT INTO $table(position,name, big, small)
-			VALUES('2','facebook', '<a name=\'fb_share\'></a><script src=\'http://static.ak.fbcdn.net/connect.php/js/FB.Share\' type=\'text/javascript\'></script>', '<a name=\'fb_share\' type=\'button_count\' href=\'http://www.facebook.com/sharer.php\'>Share</a><script src=\'http://static.ak.fbcdn.net/connect.php/js/FB.Share\' type=\'text/javascript\'></script>')");
+			VALUES('2','facebook', '<a name=\'fb_share\' type=\'box_count\' href=\'http://www.facebook.com/sharer.php\'>Share</a><script src=\'http://static.ak.fbcdn.net/connect.php/js/FB.Share\' type=\'text/javascript\'></script>', '<a name=\'fb_share\' type=\'button_count\' href=\'http://www.facebook.com/sharer.php\'>Share</a><script src=\'http://static.ak.fbcdn.net/connect.php/js/FB.Share\' type=\'text/javascript\'></script>')");
 		$wpdb->query("INSERT INTO $table(position,name, big, small)
 			VALUES('3','buzz', '<a title=\'Post to Google Buzz\' class=\'google-buzz-button\' href=\'http://www.google.com/buzz/post\' data-button-style=\'normal-count\'></a><script type=\'text/javascript\' src=\'http://www.google.com/buzz/api/button.js\'></script>', '<a title=\'Post to Google Buzz\' class=\'google-buzz-button\' href=\'http://www.google.com/buzz/post\' data-button-style=\'small-count\'></a><script type=\'text/javascript\' src=\'http://www.google.com/buzz/api/button.js\'></script>')");
 		$wpdb->query("INSERT INTO $table(position,name, big, small)
