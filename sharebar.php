@@ -104,7 +104,7 @@ function sharebar_horizontal($print = true){
 		foreach($results as $result)
 			$str .= '<li>'.sharebar_filter($result->small).'</li>';
 		$str .= '</ul>';
-		if($echo) echo $str; else return $str;
+		if($print) echo $str; else return $str;
 	}
 }
 
