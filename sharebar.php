@@ -145,14 +145,16 @@ function sharebar_update_button($id, $uptask){
 }
 
 function sharebar_init(){
-	if(!is_admin()) wp_enqueue_script('sharebar', get_bloginfo('wpurl').'/wp-content/plugins/sharebar/js/sharebar.js',array('jquery'));
+	if(!is_admin()) {
+	  wp_enqueue_script('sharebar', get_bloginfo('wpurl').'/wp-content/plugins/sharebar/js/sharebar.js',array('jquery'));
+	  wp_enqueue_style('sharebar', get_bloginfo('wpurl').'/wp-content/plugins/sharebar/css/sharebar.css');
+  }
 }
 
 function sharebar_header(){
 	global $sharebar_options;
 	foreach($sharebar_options as $option) $$option = get_option('sharebar_'.$option);
 	if(function_exists('wp_enqueue_script') && (is_single() || is_page())) {
-		echo '<link rel="stylesheet" href="'.get_bloginfo('wpurl').'/wp-content/plugins/sharebar/css/sharebar.css" type="text/css" media="screen" />';
 		if($horizontal)	$hori = 'true'; else $hori = 'false';
 		if(!$width) $width = 1000;
 		echo "\n"; ?><script type="text/javascript">jQuery(document).ready(function($) { $('.sharebar').sharebar({horizontal:'<?php echo $hori; ?>',swidth:'<?php echo $swidth; ?>',minwidth:<?php echo $width; ?>,position:'<?php echo $position; ?>',leftOffset:<?php echo $leftoffset; ?>,rightOffset:<?php echo $rightoffset; ?>}); });</script><?php echo "\n"; ?><!-- Sharebar Plugin by Monjurul Dolon (http://mdolon.com/) - more info at: http://devgrow.com/sharebar-wordpress-plugin --><?php echo "\n"; ?><?php
