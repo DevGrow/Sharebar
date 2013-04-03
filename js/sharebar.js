@@ -13,7 +13,9 @@ jQuery.fn.sharebar = function(options) {
 	var sharebarx = jQuery('#sharebarx');
 	var parent = jQuery(sharebar).parent().width();
 	var sw = jQuery(sharebar).width();
-	var start = sharebar_init();
+	if(sharebar.length) {
+  	var start = sharebar_init();
+	}
 
 	function sharebar_init(){
 		if (o.position == 'left') jQuery(sharebar).css('marginLeft',(0-sw-o.leftOffset));
