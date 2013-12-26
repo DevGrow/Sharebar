@@ -1,0 +1,54 @@
+@media (max-width: 800px) {
+  .primary-content {
+    padding-right: 15px !important; }
+    .primary-content .sidebar {
+      display: none; } }
+#sharebar-admin {
+  margin: 20px 20px 20px 0;
+  background: #fff; }
+  #sharebar-admin .header {
+    padding: 15px;
+    background: #222; }
+    #sharebar-admin .header .logo {
+      display: block;
+      padding-left: 75px;
+      min-height: 64px;
+      background: url(../images/logo.png) no-repeat top left;
+      color: #fff;
+      font-size: 40px;
+      line-height: 64px;
+      text-decoration: none;
+      font-weight: bold; }
+  #sharebar-admin .primary-nav {
+    background: #008853;
+    overflow: hidden; }
+    #sharebar-admin .primary-nav ul {
+      margin: 0; }
+      #sharebar-admin .primary-nav ul li {
+        float: left;
+        margin: 0;
+        padding: 0; }
+        #sharebar-admin .primary-nav ul li a {
+          display: block;
+          padding: 10px 15px;
+          color: #fff;
+          font-size: 18px;
+          line-height: 18px;
+          text-decoration: none;
+          font-weight: bold;
+          border-right: 2px solid #016d43; }
+          #sharebar-admin .primary-nav ul li a:hover {
+            background: #016d43; }
+  #sharebar-admin .primary-content {
+    position: relative;
+    padding: 15px 300px 15px 15px;
+    min-height: 100px; }
+    #sharebar-admin .primary-content .content, #sharebar-admin .primary-content .sidebar {
+      padding: 15px; }
+    #sharebar-admin .primary-content .content {
+      background: #fdfbf6; }
+    #sharebar-admin .primary-content .sidebar {
+      position: absolute;
+      right: 15px;
+      width: 240px;
+      background: #ccc; }

@@ -1,0 +1,13 @@
+source 'http://rubygems.org'
+
+gem 'guard'
+gem 'guard-sprockets', :git => 'git://github.com/dormi/guard-sprockets.git'
+gem 'guard-coffeescript'
+gem 'yui-compressor'
+gem 'coffee-script'
+gem 'coffee-rails'
+gem 'sass'
+gem 'sass-rails'
+gem 'eco'
+gem 'compass'
+gem 'compass-rails'
