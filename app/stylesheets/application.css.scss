@@ -35,7 +35,7 @@
           color: #fff;  font-size: 18px;  line-height: 18px;
           text-decoration: none;  font-weight: bold;
           border-right: 2px solid #016d43;
-          &:hover {
+          &:hover, &.active {
             background: #016d43;
           }
         }
@@ -46,17 +46,14 @@
     position: relative;
     padding: 15px 300px 15px 15px;
     min-height: 100px;
-    .content, .sidebar {
-      padding: 15px;
-    }
     .content {
-      background: #fdfbf6;
     }
     .sidebar {
       position: absolute;
       right: 15px;
+      padding: 15px;
       width: 240px;
-      background: #ccc;
+      background: #fcfbf4;
     }
   }
 }

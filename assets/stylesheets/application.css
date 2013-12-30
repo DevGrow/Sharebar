@@ -37,18 +37,15 @@
           text-decoration: none;
           font-weight: bold;
           border-right: 2px solid #016d43; }
-          #sharebar-admin .primary-nav ul li a:hover {
+          #sharebar-admin .primary-nav ul li a:hover, #sharebar-admin .primary-nav ul li a.active {
             background: #016d43; }
   #sharebar-admin .primary-content {
     position: relative;
     padding: 15px 300px 15px 15px;
     min-height: 100px; }
-    #sharebar-admin .primary-content .content, #sharebar-admin .primary-content .sidebar {
-      padding: 15px; }
-    #sharebar-admin .primary-content .content {
-      background: #fdfbf6; }
     #sharebar-admin .primary-content .sidebar {
       position: absolute;
       right: 15px;
+      padding: 15px;
       width: 240px;
-      background: #ccc; }
+      background: #fcfbf4; }

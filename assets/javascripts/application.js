@@ -65,7 +65,7 @@
     }
     (function() {
       (function() {
-        __out.push('This is the index view\n');
+        __out.push('<h2>Configure Buttons</h2>\n<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nibh lorem, eleifend eu bibendum ac, commodo vel augue. Ut nibh tortor, dignissim eu arcu sed, bibendum sodales justo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>\n');
       
       }).call(this);
       

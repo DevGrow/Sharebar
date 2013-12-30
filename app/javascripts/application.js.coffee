@@ -1,5 +1,6 @@
 //= require config
-//= require_tree ./vendor
+//= require ./vendor/underscore.min
+//= require ./vendor/backbone.min
 //= require_tree ./models
 //= require_tree ./collections
 //= require_tree ./templates

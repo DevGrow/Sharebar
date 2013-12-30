@@ -34,7 +34,9 @@ if(!defined('PLUGIN_PATH')) define('PLUGIN_PATH', plugins_url("", __FILE__));
 // Require API files
 require(PLUGIN_DIR . "/app/api/admin.php");
 require(PLUGIN_DIR . "/app/api/buttons.php");
+require(PLUGIN_DIR . "/app/api/posts.php");
 
-add_action( 'plugins_loaded', array( 'SharebarAdmin', 'getInstance' ) );
+add_action('plugins_loaded', array('SharebarAdmin', 'getInstance'));
+add_action('plugins_loaded', array('SharebarPosts', 'getInstance'));
 
 ?>
