@@ -118,8 +118,8 @@ function sharebar_header(){
 
 	if(function_exists('wp_enqueue_script') && (is_single() || is_page())) {
 		wp_enqueue_script('jquery');
-		wp_enqueue_script('sharebar', get_bloginfo('wpurl').'/wp-content/plugins/sharebar/js/sharebar.js',array(),false,true);
-		echo '<link rel="stylesheet" href="'.get_bloginfo('wpurl').'/wp-content/plugins/sharebar/css/sharebar.css" type="text/css" media="screen" />';
+		wp_enqueue_script('sharebar', plugins_url('js/sharebar.js', __FILE__), array('jquery'),false,true);
+		wp_enqueue_style( 'sharebar_style', plugins_url('css/sharebar.css', __FILE__));
 	}
 }
 
